@@ -1,0 +1,24 @@
+{
+    "posts": [
+        {
+            "id": "1",
+            "username": "A",
+            "title": "Job 1",
+            "content": "obito",
+            "createDate": "2024-6-25",
+            "deadline": "2024-6-25",
+            "finishDay": "2024-6-26",
+            "status": "Hoàn thành"
+        },
+        {
+            "id": "2",
+            "username": "B",
+            "title": "Job 2",
+            "content": "mck",
+            "createDate": "2024-6-25",
+            "deadline": "2024-6-25",
+            "finishDay": "",
+            "status": "Chưa hoàn thành"
+        }
+    ]
+}
