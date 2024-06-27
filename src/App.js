@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { AppProvider } from './Context/AppContext';
+import CardWeather from './components/CardWeather';
+import CardWeatherHour from './components/CardWeatherHour';
+import Header from './components/Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppProvider> {/* Ensure AppProvider wraps around the context provider */}
+        <div className='weather-container'>
+          <div className='header' style={{ display: 'flex', justifyContent: 'center', paddingTop: '20px' }}>
+            <Header />
+          </div>
+          <div className='weather-content' style={{ display: 'flex', justifyContent: 'center', paddingTop: '20px' }}>
+            <CardWeather />
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '20px', flexWrap: 'wrap' }}>
+            <CardWeatherHour />
+          </div>
+        </div>
+      </AppProvider>
     </div>
   );
 }
